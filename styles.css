@@ -34,7 +34,7 @@ body {
     line-height: 1.5;
     font-family: system-ui, -apple-system, BlinkMacSystemFont,
         "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #2D3E27;
+    background-color: var(--sidebar-green);
     color: #FFFFFF;
     overflow-x: hidden;
 }
@@ -72,7 +72,29 @@ body.is-preload *::after {
 }
 
 
+:root {
+    /* ძირითადი ბრენდული ფერები */
+    --sidebar-green: #2D3E27;
+    /* მუქი ტყისფერი მწვანე */
+    --cta-green: #7BB354;
+    /* Greenway-ს ნათელი მწვანე */
+    --accent-lime: #A3C644;
+    /* მკვეთრი მწვანე აქცენტებისთვის */
 
+    /* Overlay და სპეცეფექტები */
+    --image-overlay: rgba(94, 75, 102, 0.5);
+    /* იასამნისფერი ფენა ფოტოზე */
+    --sidebar-line: rgba(163, 198, 68, 0.3);
+    /* გამყოფი ხაზების გამჭვირვალე ვერსია */
+
+    /* ტექსტის ფერები */
+    --text-white: #FFFFFF;
+    --text-muted: rgba(255, 255, 255, 0.55);
+    /* ნაკლებად მნიშვნელოვანი ტექსტისთვის */
+
+    /* გარდამავალი ფერები (Hover ეფექტებისთვის) */
+    --cta-hover: #8cc662;
+}
 
 
 /* ================================
@@ -81,7 +103,7 @@ body.is-preload *::after {
 
 #sidebar {
     padding: 2.5em 2.5em 0.5em 2.5em;
-    background: #312450;
+    background: var(--sidebar-green);
     cursor: default;
     height: 100vh;
     left: 0;
@@ -119,6 +141,7 @@ body.is-preload *::after {
     opacity: 1;
     width: 100%;
 }
+
 #sidebar nav>ul {
     list-style: none;
     padding: 0;
@@ -138,6 +161,7 @@ body.is-preload *::after {
     padding: 0;
     position: relative;
 }
+
 #sidebar nav>ul>li:first-child {
     margin: 0;
 }
@@ -176,13 +200,14 @@ body.is-preload *::after {
     -ms-transition-delay: 1.25s;
     transition-delay: 1.25s;
 }
+
 #sidebar nav a {
     -moz-transition: color 0.2s ease;
     -webkit-transition: color 0.2s ease;
     -ms-transition: color 0.2s ease;
     transition: color 0.2s ease;
     border: 0;
-    color: rgba(255, 255, 255, 0.35);
+    color: var(--text-white);
     display: block;
     font-size: 0.6em;
     font-weight: bold;
@@ -205,11 +230,12 @@ body.is-preload *::after {
     right: 0;
     width: 100%;
 }
+
 #sidebar nav a:before {
-    background: #3c2c62;
+    background: linear-gradient(to right, var(--accent-lime), #b74e91);
 }
 
- #sidebar nav a:after {
+#sidebar nav a:after {
     background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
     background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
     background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
@@ -232,6 +258,7 @@ body.is-preload *::after {
 #sidebar nav a.active:after {
     max-width: 100%;
 }
+
 /* body.is-preload #sidebar>.inner {
     opacity: 0;
 } */
@@ -312,7 +339,8 @@ body.is-preload *::after {
         display: none;
     }
 
-} 
+}
+
 /* ================================
 ================================ */
 /* Wrapper (main) */
