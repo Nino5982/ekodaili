@@ -10,7 +10,7 @@
       type="image/x-icon" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="is-preload">
     <section id="sidebar">
       <div class="inner">
         <nav>
@@ -24,15 +24,35 @@
         </nav>
       </div>
     </section>
-    <section class="hero">
-      <button onclick="handleRedirect()">კატალოგის ნახვა</button>
-    </section>
-    <section class="benefits"></section>
-    <section class="categories"></section>
-    <section class="steps"></section>
-    <section class="about"></section>
 
-    <div class="fixed-cta"></div>
+    <div id="wrapper">
+      <section id="intro" class="wrapper style1 fullscreen fade-up">
+        <div class="inner">
+          <h1>ეკოლოგიურად სუფთა პროდუქტები ყოველდღიური ჯანმრთელობისთვის</h1>
+          <p>
+            გრინვეის ოფიციალური კატალოგი — შეუკვეთე მარტივად და იზრუნე შენს
+            ჯანმრთელობაზე.
+          </p>
+          <ul class="actions">
+            <li>
+              <a href="შენი-რეფერალური-ლინკი" class="button scrolly"
+                >კატალოგის ნახვა</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+    </div>
+
+    <footer id="footer" class="wrapper style1-alt">
+      <div class="inner">
+        <ul class="menu">
+          <li>&copy; <strong> ეთო ტოფაძე</strong>. ყველა უფლება დაცულია.</li>
+          <li>Greenway-ს დამოუკიდებელი პარტნიორი</li>
+        </ul>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
