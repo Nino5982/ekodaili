@@ -388,10 +388,22 @@ body.is-preload *::after {
 #intro .inner {
     position: relative;
     z-index: 2;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
+
+.inner h1 {
+    font-size: 2.5em;
+}
+
 
 #intro p {
     font-size: 1.25em;
+    color: #c1e363;
+    font-weight: 700;
 }
 
 #intro .overlay {
@@ -642,6 +654,10 @@ ul.actions li {
     vertical-align: middle;
 }
 
+ul.actions li a {
+    background-color: var(--cta-green);
+}
+
 ul.actions.special {
     -moz-justify-content: center;
     -webkit-justify-content: center;
@@ -649,19 +665,19 @@ ul.actions.special {
     justify-content: center;
     width: 100%;
     margin-left: 0;
-}
+} 
 
-ul.actions.special li:first-child {
+ ul.actions.special li:first-child {
     padding-left: 0;
-}
+} 
 
-ul.actions.stacked {
+ ul.actions.stacked {
     -moz-flex-direction: column;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     margin-left: 0;
-}
+} 
 
 ul.actions.stacked li {
     padding: 1.3em 0 0 0;
@@ -669,9 +685,9 @@ ul.actions.stacked li {
 
 ul.actions.stacked li:first-child {
     padding-top: 0;
-}
+} 
 
-ul.actions.fit {
+ ul.actions.fit {
     width: calc(100% + 1em);
 }
 
@@ -695,53 +711,38 @@ ul.actions.fit.stacked {
     width: 100%;
 }
 
-@media screen and (max-width: 480px) {
 
+
+
+@media screen and (max-width: 480px) {
+    .inner h1 {
+        font-size: 1.8em;
+    }
+
+    /* ყველა ძველი -moz, -webkit, -ms პრეფიქსი ამოშლილია */
     ul.actions:not(.fixed) {
-        -moz-flex-direction: column;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
+        display: flex;
+        /* დარწმუნდი რომ ფლექსია */
         flex-direction: column;
         margin-left: 0;
         width: 100% !important;
     }
 
     ul.actions:not(.fixed) li {
-        -moz-flex-grow: 1;
-        -webkit-flex-grow: 1;
-        -ms-flex-grow: 1;
         flex-grow: 1;
-        -moz-flex-shrink: 1;
-        -webkit-flex-shrink: 1;
-        -ms-flex-shrink: 1;
         flex-shrink: 1;
         padding: 1em 0 0 0;
         text-align: center;
         width: 100%;
     }
 
-    ul.actions:not(.fixed) li>* {
+    /* აერთიანებს ყველა ღილაკის ტიპს */
+    ul.actions:not(.fixed) li>*,
+    ul.actions:not(.fixed) li .button {
         width: 100%;
     }
 
     ul.actions:not(.fixed) li:first-child {
         padding-top: 0;
     }
-
-    ul.actions:not(.fixed) li input[type="submit"],
-    ul.actions:not(.fixed) li input[type="reset"],
-    ul.actions:not(.fixed) li input[type="button"],
-    ul.actions:not(.fixed) li button,
-    ul.actions:not(.fixed) li .button {
-        width: 100%;
-    }
-
-    ul.actions:not(.fixed) li input[type="submit"].icon:before,
-    ul.actions:not(.fixed) li input[type="reset"].icon:before,
-    ul.actions:not(.fixed) li input[type="button"].icon:before,
-    ul.actions:not(.fixed) li button.icon:before,
-    ul.actions:not(.fixed) li .button.icon:before {
-        margin-left: -0.5rem;
-    }
-
 }
