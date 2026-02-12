@@ -237,6 +237,8 @@ ul.actions li a:hover {
     gap: 2em;
     justify-content: space-between;
     margin-top: 2em;
+    z-index: 2;
+    position: relative;
 }
 
 .features section {
@@ -403,103 +405,7 @@ ul.actions li a:hover {
 }
 
 
-/* 7. Responsive Design */
 
-/* Tablet (1280px) */
-@media screen and (max-width: 1280px) {
-    #sidebar {
-        width: 100%;
-        height: 3.5em;
-        flex-direction: row;
-        padding: 0;
-        align-items: stretch;
-    }
-
-    #sidebar nav ul {
-        display: flex;
-        height: 100%;
-    }
-
-    #sidebar nav li {
-        margin: 0 0 0 2em;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    /* #sidebar nav a {
-        padding: 0;
-    } */
-
-    #wrapper {
-        margin-left: 0;
-        padding-top: 3.5em;
-    }
-
-    #intro {
-        background-attachment: scroll;
-    }
-}
-
-@media screen and (max-width: 980px) {
-    .split-layout {
-        gap: 2em;
-    }
-
-    .gallery-grid {
-        gap: 10px;
-    }
-}
-
-/* Mobile (736px) */
-@media screen and (max-width: 736px) {
-    #sidebar {
-        display: none;
-    }
-
-    #wrapper {
-        padding-top: 0;
-    }
-
-    #intro .inner {
-        width: 90%;
-        text-align: center;
-    }
-
-    #intro h1 {
-        font-size: 2em;
-    }
-
-    ul.actions {
-        flex-direction: column;
-    }
-
-    .button {
-        width: 100%;
-    }
-
-    .features {
-        flex-direction: column;
-        gap: 1.5em;
-    }
-
-    .features section {
-        min-width: 100%;
-    }
-
-    .split-layout {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .section-title.left {
-        text-align: center;
-    }
-
-    .gallery-item {
-        height: 160px;
-    }
-}
 
 
 /* –––––––––––––––––––––––––––––– */
@@ -650,8 +556,263 @@ ul.actions li a:hover {
     transform-origin: left;
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
+
+
+
+
+/* --- Partner Card Styling --- */
+.about-partner {
+    flex: 1 !important;
+    text-align: left !important;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3em !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.3em 1em;
+    background: var(--cta-green);
+    color: white;
+    font-size: 0.7em;
+    font-weight: bold;
+    border-radius: 2em;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+}
+
+.about-partner h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+/* --- Steps Styling --- */
+.order-flow {
+    flex: 1.2 !important;
+    text-align: left !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.step {
+    display: flex;
+    gap: 1.5em;
+    margin-bottom: 2.5em;
+}
+
+.step-num {
+    flex-shrink: 0;
+    width: 2.5em;
+    height: 2.5em;
+    border: 2px solid var(--accent-lime);
+    color: var(--accent-lime);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.step-text h4 {
+    font-size: 1rem;
+    margin-bottom: 0.3em;
+    color: var(--text-white);
+}
+
+.step-link {
+    display: inline-block;
+    margin-top: 0.5em;
+    font-size: 0.8em;
+    color: var(--accent-lime);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.step-link:hover {
+    padding-left: 5px;
+}
+
+/* --- Fixed CTA Button (Floating) --- */
+/* .fixed-cta-button {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    z-index: 9999;
+    background: var(--cta-green);
+    color: white;
+    padding: 1.2em 2.5em;
+    border-radius: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+} */
+
+.fixed-cta-button:hover {
+    background: var(--accent-lime);
+    transform: translateY(-5px);
+    color: white;
+}
+
+/* --- Final CTA Parallax Section --- */
+.wrapper-parallax {
+    position: relative;
+    padding: 10em 0;
+    /* სიმაღლე, რომ ფოტო კარგად გამოჩნდეს სქროლვისას */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url("./assets/images/intro.webp") center/cover no-repeat fixed;
+    /* იგივე ფოტო და ფიქსირებული პოზიცია */
+    overflow: hidden;
+}
+
+.wrapper-parallax .overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--image-overlay);
+    z-index: 1;
+}
+
+.wrapper-parallax .inner {
+    position: relative;
+    z-index: 2;
+}
+
+.wrapper-parallax h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: var(--text-white);
+}
+
+.wrapper-parallax p {
+    color: var(--accent-lime);
+    font-weight: bold;
+    margin-bottom: 2.5em;
+    font-size: 1.1em;
+}
+
+/* --- Responsive --- */
+
+/* Tablet (1280px) */
+@media screen and (max-width: 1280px) {
+    #sidebar {
+        width: 100%;
+        height: 3.5em;
+        flex-direction: row;
+        padding: 0;
+        align-items: stretch;
+    }
+
+    #sidebar nav ul {
+        display: flex;
+        height: 100%;
+    }
+
+    #sidebar nav li {
+        margin: 0 0 0 2em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+
+    #wrapper {
+        margin-left: 0;
+        padding-top: 3.5em;
+    }
+
+    #intro {
+        background-attachment: scroll;
+    }
+
+    .wrapper-parallax {
+        background-attachment: scroll;
+        padding: 6em 0;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .split-layout {
+        gap: 2em;
+    }
+
+    .gallery-grid {
+        gap: 10px;
+    }
+
+
+    .order-list {
+        width: 100%;
+    }
+
+    .fixed-cta-button {
+        bottom: 1em;
+        right: 1em;
+        left: 1em;
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+    #support .features {
+        flex-direction: column-reverse;
+    }
+}
+
+/* Mobile (736px) */
+@media screen and (max-width: 736px) {
+    #sidebar {
+        display: none;
+    }
+
+    #wrapper {
+        padding-top: 0;
+    }
+
+    #intro .inner {
+        width: 90%;
+        text-align: center;
+    }
+
+    #intro h1 {
+        font-size: 2em;
+    }
+
+    ul.actions {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .features section {
+        min-width: 100%;
+    }
+
+    .split-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-title.left {
+        text-align: center;
+    }
+
+    .gallery-item {
+        height: 160px;
+    }
+
     .category-cards-grid {
         grid-template-columns: 1fr;
         /* Single column on smaller screens */
