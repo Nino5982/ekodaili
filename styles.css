@@ -434,15 +434,10 @@ ul.actions li a:hover {
 .category-cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    /* Responsive grid */
-    gap: 2.5em;
-    /* Spacing between cards */
+    gap: 4.5em;
     max-width: 1200px;
-    /* Max width for content */
     margin: 0 auto;
-    /* Center the grid */
     padding: 0 2em;
-    /* Padding on sides */
 }
 
 .category-card {
@@ -450,33 +445,23 @@ ul.actions li a:hover {
     flex-direction: column;
     background: white;
     border-radius: 12px;
-    /* Rounded corners */
     overflow: hidden;
-    /* Ensures image corners are rounded */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
-    /* Soft shadow */
     transition: all 0.3s ease-in-out;
     text-decoration: none;
-    /* Remove underline from link */
     color: inherit;
-    /* Inherit text color */
     border: 1px solid #f0f0f0;
-    /* Subtle border */
 }
 
 .category-card:hover {
     transform: translateY(-8px);
-    /* Lift effect on hover */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    /* Enhanced shadow on hover */
     border-color: var(--cta-green);
-    /* Brand accent on hover */
 }
 
 .card-image {
     width: 100%;
     height: 200px;
-    /* Fixed height for images */
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid #eee;
@@ -687,14 +672,164 @@ ul.actions li a:hover {
 .wrapper-parallax h2 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
-    color: var(--text-white);
+    color: var(--cta-green);
 }
 
 .wrapper-parallax p {
-    color: var(--accent-lime);
+    /* color: var(--accent-lime); */
+    color: #4A5D44;
     font-weight: bold;
     margin-bottom: 2.5em;
     font-size: 1.1em;
+}
+
+
+
+/* ––––––––––––––––––––––––––––– */
+/* სექციის კონტეინერი */
+.about-me-section {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #f9fbf8bd;
+    /* ღია ნაცრისფერი/მწვანე ფონი */
+}
+
+/* მთავარი ბარათი */
+.about-card {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.about-card__main {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    z-index: 2;
+}
+
+.about-card__image-wrapper {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid #f0f4ee;
+}
+
+.about-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.status-label {
+
+    color: #7BB354;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.partner-name {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    /* color: var(--sidebar-green); */
+    color: #2D3E27;
+}
+
+.partner-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* ბულეთები */
+.about-benefits {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 35px;
+}
+
+.about-benefits li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    color: #4A5D44;
+    font-weight: 500;
+}
+
+.about-benefits li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--cta-green);
+    font-weight: bold;
+}
+
+/* WhatsApp ღილაკი */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--cta-green);
+    color: white;
+    padding: 18px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background-color: var(--accent-lime);
+    transform: translateY(-3px);
+}
+
+/* დეკორატიული ფოტო (მარჯვენა ქვედა კუთხეში) */
+.about-card__decor {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 300px;
+    opacity: 0.6;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.decor-img {
+    width: 100%;
+    transform: rotate(-5deg);
+}
+
+/* რესპონსივი მობილურისთვის */
+@media (max-width: 850px) {
+    .about-card__main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-card {
+        padding: 40px 20px;
+        width: 100%;
+    }
+
+    .about-benefits li {
+        text-align: left;
+    }
+
+    .about-card__decor {
+        display: none;
+    }
 }
 
 /* --- Responsive --- */
@@ -759,7 +894,7 @@ ul.actions li a:hover {
         font-size: 0.8em;
     }
 
-    #support .features {
+    #three .features {
         flex-direction: column-reverse;
     }
 }
@@ -798,6 +933,7 @@ ul.actions li a:hover {
 
     .features section {
         min-width: 100%;
+        padding: 1em;
     }
 
     .split-layout {
@@ -822,5 +958,9 @@ ul.actions li a:hover {
     .section-title {
         font-size: 2em;
         margin-bottom: 2em;
+    }
+
+    .wrapper-parallax h2 {
+        font-size: 2.5em;
     }
 }
