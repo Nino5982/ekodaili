@@ -271,7 +271,6 @@ ul.actions li a:hover {
     margin: 0 auto;
     width: 50px;
     height: 50px;
-    margin-bottom: 1.5em;
     filter: invert(78%) sepia(39%) saturate(615%) hue-rotate(44deg) brightness(92%) contrast(88%);
 }
 
@@ -314,12 +313,6 @@ ul.actions li a:hover {
     border: 1px solid rgba(113, 55, 138, 0.08);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(113, 55, 138, 0.12);
-    border-color: rgba(113, 55, 138, 0.3);
 }
 
 .icon-wrapper {
@@ -409,38 +402,6 @@ ul.actions li a:hover {
     transform: translateY(-5px);
 }
 
-/* card btn-s */
-.card-button {
-    display: inline-block;
-    background: #71378a;
-    color: white !important;
-    padding: 1em 2.2em;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    border: none;
-    margin-top: 1.5em;
-}
-
-.card-button:hover {
-    background: var(--sidebar-green);
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.card-button.outline {
-    background: transparent;
-    border: 2px solid #71378a;
-    color: #71378a !important;
-}
-
-.card-button.outline:hover {
-    background: #71378a;
-    color: white !important;
-}
 
 /* 7. Responsive Design */
 
@@ -537,5 +498,168 @@ ul.actions li a:hover {
 
     .gallery-item {
         height: 160px;
+    }
+}
+
+
+/* –––––––––––––––––––––––––––––– */
+
+/* Custom Section General Styles (Adjusted for the new design) */
+.custom-section {
+    background-color: #f8faf9 !important;
+    /* Lighter background */
+    color: var(--sidebar-green) !important;
+    padding: 6em 0;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--sidebar-green);
+    /* Use brand green for titles */
+    font-size: 2.5em;
+    /* Slightly larger title */
+    margin-bottom: 3em;
+    /* More space below title */
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+/* Category Cards Grid */
+.category-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Responsive grid */
+    gap: 2.5em;
+    /* Spacing between cards */
+    max-width: 1200px;
+    /* Max width for content */
+    margin: 0 auto;
+    /* Center the grid */
+    padding: 0 2em;
+    /* Padding on sides */
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Ensures image corners are rounded */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    /* Soft shadow */
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    /* Remove underline from link */
+    color: inherit;
+    /* Inherit text color */
+    border: 1px solid #f0f0f0;
+    /* Subtle border */
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    /* Lift effect on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    /* Enhanced shadow on hover */
+    border-color: var(--cta-green);
+    /* Brand accent on hover */
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    /* Fixed height for images */
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #eee;
+}
+
+.beauty {
+    background-image: url('./assets/images/Gemini_Generated_Image_pndimopndimopndi.png');
+}
+
+.house-care {
+    background-image: url('./assets/images/hause.png');
+}
+
+.brands {
+    background-image: url('./assets/images/brands.png');
+}
+
+.health {
+    background-image: url('./assets/images/health.png');
+}
+
+.card-content {
+    padding: 1.8em 2em;
+    /* Padding inside the card */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Allows content to expand */
+}
+
+.card-content h3 {
+    font-size: 1.4em;
+    color: var(--sidebar-green);
+    /* Brand green for titles */
+    margin-bottom: 0.6em;
+    font-weight: 700;
+}
+
+.card-content p {
+    font-size: 0.95em;
+    color: #555;
+    /* Muted text color */
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    flex-grow: 1;
+    /* Allows paragraph to take available space */
+}
+
+.card-link {
+    display: inline-block;
+    color: var(--cta-green);
+    /* Accent green for link */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    position: relative;
+    padding-bottom: 3px;
+    transition: color 0.3s ease;
+}
+
+.card-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--cta-green);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.card-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .category-cards-grid {
+        grid-template-columns: 1fr;
+        /* Single column on smaller screens */
+        padding: 0 1.5em;
+    }
+
+    .section-title {
+        font-size: 2em;
+        margin-bottom: 2em;
     }
 }
