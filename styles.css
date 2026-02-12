@@ -433,8 +433,8 @@ ul.actions li a:hover {
 /* Category Cards Grid */
 .category-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 4.5em;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3.5em;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2em;
@@ -468,19 +468,19 @@ ul.actions li a:hover {
 }
 
 .beauty {
-    background-image: url('./assets/images/Gemini_Generated_Image_pndimopndimopndi.png');
+    background-image: url('./assets/images/beauty.webp');
 }
 
 .house-care {
-    background-image: url('./assets/images/hause.png');
+    background-image: url('./assets/images/hause.webp');
 }
 
 .brands {
-    background-image: url('./assets/images/brands.png');
+    background-image: url('./assets/images/brands.webp');
 }
 
 .health {
-    background-image: url('./assets/images/health.png');
+    background-image: url('./assets/images/health.webp');
 }
 
 .card-content {
@@ -637,11 +637,11 @@ ul.actions li a:hover {
     border: 1px solid rgba(255, 255, 255, 0.2);
 } */
 
-.fixed-cta-button:hover {
+/* .fixed-cta-button:hover {
     background: var(--accent-lime);
     transform: translateY(-5px);
     color: white;
-}
+} */
 
 /* --- Final CTA Parallax Section --- */
 .wrapper-parallax {
@@ -793,22 +793,6 @@ ul.actions li a:hover {
 .whatsapp-btn:hover {
     background-color: var(--accent-lime);
     transform: translateY(-3px);
-}
-
-/* დეკორატიული ფოტო (მარჯვენა ქვედა კუთხეში) */
-.about-card__decor {
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    width: 300px;
-    opacity: 0.6;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.decor-img {
-    width: 100%;
-    transform: rotate(-5deg);
 }
 
 /* რესპონსივი მობილურისთვის */
