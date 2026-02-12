@@ -230,83 +230,6 @@ ul.actions li a:hover {
     border-color: var(--accent-lime);
 }
 
-/* 7. Responsive Design */
-
-/* Tablet (1280px) */
-@media screen and (max-width: 1280px) {
-    #sidebar {
-        width: 100%;
-        height: 3.5em;
-        flex-direction: row;
-        padding: 0;
-        align-items: stretch;
-    }
-
-    #sidebar nav ul {
-        display: flex;
-        height: 100%;
-    }
-
-    #sidebar nav li {
-        margin: 0 0 0 2em;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    /* #sidebar nav a {
-        padding: 0;
-    } */
-
-    #wrapper {
-        margin-left: 0;
-        padding-top: 3.5em;
-    }
-
-    #intro {
-        background-attachment: scroll;
-    }
-}
-
-/* Mobile (736px) */
-@media screen and (max-width: 736px) {
-    #sidebar {
-        display: none;
-    }
-
-    #wrapper {
-        padding-top: 0;
-    }
-
-    #intro .inner {
-        width: 90%;
-        text-align: center;
-    }
-
-    #intro h1 {
-        font-size: 2em;
-    }
-
-    ul.actions {
-        flex-direction: column;
-    }
-
-    .button {
-        width: 100%;
-    }
-
-    .features {
-        flex-direction: column;
-        gap: 1.5em;
-    }
-
-    .features section {
-        min-width: 100%;
-    }
-}
-
-
-
 /* Features Grid */
 .features {
     display: flex;
@@ -350,4 +273,269 @@ ul.actions li a:hover {
     height: 50px;
     margin-bottom: 1.5em;
     filter: invert(78%) sepia(39%) saturate(615%) hue-rotate(44deg) brightness(92%) contrast(88%);
+}
+
+/* featers */
+.custom-section {
+    background-color: #fcfdfe !important;
+    color: var(--sidebar-green) !important;
+    padding: 8em 0;
+}
+
+.alternate-bg {
+    background-color: #ffffff !important;
+}
+
+.section-title {
+    color: var(--sidebar-green);
+    font-size: 2.2em;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2.5em;
+    letter-spacing: -0.02em;
+}
+
+.section-title.left {
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5em;
+}
+
+.feature-card {
+    background: white;
+    padding: 3.5em 2.5em;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(113, 55, 138, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(113, 55, 138, 0.12);
+    border-color: rgba(113, 55, 138, 0.3);
+}
+
+.icon-wrapper {
+    background: #f4f0f7;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2em;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .icon-wrapper {
+    background: #71378a;
+    transform: rotate(5deg) scale(1.1);
+}
+
+.feature-card h3 {
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    color: var(--sidebar-green);
+}
+
+.feature-card p {
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+/* categories*/
+.split-layout {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+    flex-wrap: wrap;
+}
+
+.image-gallery {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.gallery-item {
+    display: block;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.item-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(113, 55, 138, 0.9), rgba(113, 55, 138, 0.2));
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+    opacity: 0.85;
+    transition: all 0.4s ease;
+}
+
+.gallery-item:hover .item-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, var(--sidebar-green), rgba(45, 62, 39, 0.4));
+}
+
+.item-overlay span {
+    color: white;
+    font-weight: 700;
+    font-size: 1.1em;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover span {
+    transform: translateY(-5px);
+}
+
+/* card btn-s */
+.card-button {
+    display: inline-block;
+    background: #71378a;
+    color: white !important;
+    padding: 1em 2.2em;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    margin-top: 1.5em;
+}
+
+.card-button:hover {
+    background: var(--sidebar-green);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-button.outline {
+    background: transparent;
+    border: 2px solid #71378a;
+    color: #71378a !important;
+}
+
+.card-button.outline:hover {
+    background: #71378a;
+    color: white !important;
+}
+
+/* 7. Responsive Design */
+
+/* Tablet (1280px) */
+@media screen and (max-width: 1280px) {
+    #sidebar {
+        width: 100%;
+        height: 3.5em;
+        flex-direction: row;
+        padding: 0;
+        align-items: stretch;
+    }
+
+    #sidebar nav ul {
+        display: flex;
+        height: 100%;
+    }
+
+    #sidebar nav li {
+        margin: 0 0 0 2em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    /* #sidebar nav a {
+        padding: 0;
+    } */
+
+    #wrapper {
+        margin-left: 0;
+        padding-top: 3.5em;
+    }
+
+    #intro {
+        background-attachment: scroll;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .split-layout {
+        gap: 2em;
+    }
+
+    .gallery-grid {
+        gap: 10px;
+    }
+}
+
+/* Mobile (736px) */
+@media screen and (max-width: 736px) {
+    #sidebar {
+        display: none;
+    }
+
+    #wrapper {
+        padding-top: 0;
+    }
+
+    #intro .inner {
+        width: 90%;
+        text-align: center;
+    }
+
+    #intro h1 {
+        font-size: 2em;
+    }
+
+    ul.actions {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .features section {
+        min-width: 100%;
+    }
+
+    .split-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-title.left {
+        text-align: center;
+    }
+
+    .gallery-item {
+        height: 160px;
+    }
 }
