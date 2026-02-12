@@ -12,28 +12,25 @@ function handleRedirect() {
 }
 // –––––––––––––––––––––
 document.addEventListener("DOMContentLoaded", () => {
+  /* Observer Configuration */
   const observerOptions = {
-    root: null, // აკვირდება მთლიან viewport-ს
-    rootMargin: "-50% 0px -50% 0px", // სექცია აქტიურდება, როცა ეკრანის შუა ნაწილს გადაკვეთს
+    root: null,
+    rootMargin: "-25% 0px -25% 0px",
     threshold: 0,
   };
 
+  /* Active State Handler */
   const observerCallback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // ვიღებთ აქტიური სექციის ID-ს
         const id = entry.target.getAttribute("id");
-
-        // ვშლით 'active' კლასს ყველა ლინკიდან
-        document.querySelectorAll("#sidebar nav a").forEach((link) => {
-          link.classList.remove("active");
-        });
-
-        // ვამატებთ 'active' კლასს მხოლოდ იმ ლინკს, რომელიც ამ სექციას შეესაბამება
+        const navLinks = document.querySelectorAll("#sidebar nav a");
         const activeLink = document.querySelector(
           `#sidebar nav a[href="#${id}"]`,
         );
+
         if (activeLink) {
+          navLinks.forEach((link) => link.classList.remove("active"));
           activeLink.classList.add("active");
         }
       }
@@ -42,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-  // ვაკვირდებით ყველა სექციას, რომელსაც აქვს ID
-  document.querySelectorAll("section[id]").forEach((section) => {
+  /* Initialize Observer for Sections */
+  document.querySelectorAll("#wrapper > section[id]").forEach((section) => {
     observer.observe(section);
   });
 });
