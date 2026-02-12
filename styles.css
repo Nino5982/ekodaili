@@ -294,4 +294,60 @@ ul.actions li a:hover {
     .button {
         width: 100%;
     }
+
+    .features {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .features section {
+        min-width: 100%;
+    }
+}
+
+
+
+/* Features Grid */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.features section {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 1.5em;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1em;
+    transition: transform 0.3s ease;
+}
+
+.features section:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+.features h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.8em;
+    color: var(--text-white);
+}
+
+.features p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: var(--text-muted);
+}
+
+.icon-svg {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1.5em;
+    filter: invert(78%) sepia(39%) saturate(615%) hue-rotate(44deg) brightness(92%) contrast(88%);
 }
