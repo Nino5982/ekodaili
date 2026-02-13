@@ -830,30 +830,25 @@ ul.actions li a:hover {
     transform: translateY(-3px);
 }
 
-/* რესპონსივი მობილურისთვის */
-@media (max-width: 850px) {
-    .about-card__main {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #intro {
-        background: url("./assets/images/introSmall.webp") center/cover no-repeat fixed;
-    }
-
-    .about-card {
-        padding: 40px 20px;
-        width: 100%;
-    }
-
-    .about-benefits li {
-        text-align: left;
-    }
-
-    .about-card__decor {
-        display: none;
-    }
+#footer {
+    margin-left: 6px;
 }
+
+#footer .menu li {
+    border-left: solid 1px rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+#footer .menu li:first-child {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* რესპონსივი მობილურისთვის */
+
 
 /* --- Responsive --- */
 
@@ -919,6 +914,30 @@ ul.actions li a:hover {
 
     #three .features {
         flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 850px) {
+    .about-card__main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #intro {
+        background: url("./assets/images/introSmall.webp") center/cover no-repeat fixed;
+    }
+
+    .about-card {
+        padding: 40px 20px;
+        width: 100%;
+    }
+
+    .about-benefits li {
+        text-align: left;
+    }
+
+    .about-card__decor {
+        display: none;
     }
 }
 
@@ -989,5 +1008,12 @@ ul.actions li a:hover {
 
     .wrapper-parallax h2 {
         font-size: 2.5em;
+    }
+
+    #footer .menu li {
+        display: block;
+        border-left: 0;
+        margin: 1rem 0 0 0;
+        padding-left: 0;
     }
 }
