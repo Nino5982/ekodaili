@@ -8,7 +8,18 @@
       rel="shortcut icon"
       href="./assets/icons/greenway-logo.png"
       type="image/x-icon" />
-    <link rel="preload" as="image" href="./assets/images/intro.webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/introSmall.webp"
+      media="(max-width: 736px)"
+      fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/intro.webp"
+      media="(min-width: 737px)"
+      fetchpriority="high" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="is-preload">
@@ -28,6 +39,17 @@
 
     <div id="wrapper">
       <section id="intro" class="wrapper style1 fullscreen fade-up">
+        <picture>
+          <source
+            srcset="./assets/images/introSmall.webp"
+            media="(max-width: 736px)" />
+          <img
+            src="./assets/images/intro.webp"
+            alt="EcoDaily Hero"
+            class="hero-bg-img"
+            fetchpriority="high"
+            loading="eager" />
+        </picture>
         <div class="overlay"></div>
         <div class="inner">
           <h1>ეკოლოგიურად სუფთა პროდუქტები ყოველდღიური ჯანმრთელობისთვის</h1>

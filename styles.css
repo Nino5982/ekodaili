@@ -182,10 +182,26 @@ button,
 /* 5. Intro Section */
 #intro {
     position: relative;
+    overflow: hidden;
+    min-height: 500px;
     height: 100vh;
     display: flex;
     align-items: center;
-    background: url("./assets/images/intro.webp") center/cover no-repeat fixed;
+    justify-content: center;
+    overflow: hidden;
+    /* background: url("./assets/images/intro.webp") center/cover no-repeat fixed; */
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    transition: opacity 0.5s ease-in;
 }
 
 #intro .overlay {
@@ -200,6 +216,10 @@ button,
     z-index: 2;
     width: 80%;
     margin: 0 auto;
+}
+
+img.hero-bg-img {
+    aspect-ratio: 16 / 9;
 }
 
 #intro h1 {
@@ -900,6 +920,10 @@ ul.actions li a:hover {
     #intro .inner {
         width: 90%;
         text-align: center;
+    }
+
+    img.hero-bg-img {
+        aspect-ratio: 9 / 16;
     }
 
     #intro h1 {
