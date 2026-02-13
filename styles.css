@@ -74,6 +74,21 @@ button,
     transition: all 0.3s ease;
 }
 
+/* massage watsup */
+
+.massage {
+    padding: 9px;
+    position: fixed;
+    right: 2%;
+    bottom: 3%;
+    background-color: var(--sidebar-green);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 999;
+}
+
 /* 3. Sidebar Layout */
 #sidebar {
     position: fixed;
