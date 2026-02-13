@@ -802,6 +802,10 @@ ul.actions li a:hover {
         text-align: center;
     }
 
+    #intro {
+        background: url("./assets/images/introSmall.webp") center/cover no-repeat fixed;
+    }
+
     .about-card {
         padding: 40px 20px;
         width: 100%;
