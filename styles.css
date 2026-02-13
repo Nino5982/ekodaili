@@ -488,19 +488,19 @@ ul.actions li a:hover {
 }
 
 .beauty {
-    background-image: url('./assets/images/beauty.webp');
+    background-image: url('./assets/images/beauty.jpg');
 }
 
 .house-care {
-    background-image: url('./assets/images/hause.webp');
+    background-image: url('./assets/images/hause.jpg');
 }
 
 .brands {
-    background-image: url('./assets/images/brands.webp');
+    background-image: url('./assets/images/brands.png');
 }
 
 .health {
-    background-image: url('./assets/images/health.webp');
+    background-image: url('./assets/images/health.jpg');
 }
 
 .card-content {
