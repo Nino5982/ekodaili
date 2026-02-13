@@ -14,6 +14,41 @@
 
       gtag("config", "G-5KVGSBB4LW");
     </script>
+    <!-- pixel -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "1462012855339552"); // შენი Pixel ID
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1462012855339552&ev=PageView&noscript=1" />
+    </noscript>
     <!--  -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,7 +81,9 @@
             <li><a href="#two">კატეგორიები</a></li>
             <li><a href="#three">როგორ შეუკვეთო</a></li>
             <li>
-              <a href="https://greenwayglobal.ge/shop?gw=x5Ei0Kr5TG"
+              <a
+                href="https://greenwayglobal.ge/shop?gw=x5Ei0Kr5TG"
+                class="catalog-link"
                 >კატალოგის ნახვა</a
               >
             </li>
@@ -79,7 +116,7 @@
             <li>
               <a
                 href="https://greenwayglobal.ge/shop?gw=x5Ei0Kr5TG"
-                class="button scrolly"
+                class="button scrolly catalog-link"
                 >კატალოგის ნახვა</a
               >
             </li>
@@ -138,7 +175,7 @@
           <div class="category-cards-grid">
             <a
               href="https://greenwayglobal.ge/shop/house"
-              class="category-card">
+              class="category-card catalog-link">
               <div class="card-image house-care"></div>
               <div class="card-content">
                 <h3>სახლის მოვლა</h3>
@@ -148,7 +185,7 @@
             </a>
             <a
               href="https://greenwayglobal.ge/shop/beauty_and_care"
-              class="category-card">
+              class="category-card catalog-link">
               <div class="card-image beauty"></div>
               <div class="card-content">
                 <h3>სილამაზე</h3>
@@ -158,7 +195,7 @@
             </a>
             <a
               href="https://greenwayglobal.ge/shop/health"
-              class="category-card">
+              class="category-card catalog-link">
               <div class="card-image health"></div>
               <div class="card-content">
                 <h3>ჯანმრთელობა</h3>
@@ -168,7 +205,7 @@
             </a>
             <a
               href="https://greenwayglobal.ge/shop/brands"
-              class="category-card">
+              class="category-card catalog-link">
               <div class="card-image brands"></div>
               <div class="card-content">
                 <h3>ბრენდები</h3>
@@ -209,7 +246,9 @@
                       <li>სწრაფი მიწოდების მხარდაჭერა</li>
                     </ul>
 
-                    <a href="https://wa.me/995598209234" class="whatsapp-btn">
+                    <a
+                      href="https://wa.me/995598209234"
+                      class="whatsapp-btn whatsapp-link">
                       დამიკავშირდი WhatsApp-ზე
                       <i class="fab fa-whatsapp"></i>
                     </a>
@@ -222,7 +261,7 @@
       </section>
     </div>
     <div class="massage">
-      <a href="https://wa.me/995598209234">
+      <a href="https://wa.me/995598209234" class="whatsapp-link">
         <img
           src="./assets/icons/massage.svg"
           class="icon-svg"
@@ -238,5 +277,6 @@
     </footer>
 
     <script src="./script.js"></script>
+    <script src="analytics.js" defer></script>
   </body>
 </html>
