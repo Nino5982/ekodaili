@@ -55,6 +55,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EcoDaily</title>
+
     <!-- meta tags -->
     <meta
       name="title"
@@ -74,9 +75,13 @@
     <meta
       property="og:image"
       content="https://ekodaili.vercel.app/assets/images/og-image.jpg" />
-
-   
+    <!-- 
+      keywords -->
+    <meta
+      name="keywords"
+      content="ekodeili, ekodaily, ეკოდეილი, ეკო დეილი, ekodaili, Greenway Georgia, ეკო პროდუქციაekodeili, ekodaily, ekodaily" />
     <!--  -->
+    <link rel="canonical" href="https://ekodaili.vercel.app/" />
     <link
       rel="shortcut icon"
       href="./assets/icons/greenway-logo.png"
@@ -108,6 +113,7 @@
               <a
                 href="https://greenwayglobal.ge/shop?gw=x5Ei0Kr5TG"
                 class="catalog-link"
+                aria-label="იხილეთ Greenway-ს სრული კატალოგი"
                 >კატალოგის ნახვა</a
               >
             </li>
@@ -141,6 +147,7 @@
               <a
                 href="https://greenwayglobal.ge/shop?gw=x5Ei0Kr5TG"
                 class="button scrolly catalog-link"
+                aria-label="იხილეთ Greenway-ს სრული კატალოგი"
                 >კატალოგის ნახვა</a
               >
             </li>
@@ -272,7 +279,8 @@
 
                     <a
                       href="https://wa.me/995598343820"
-                      class="whatsapp-btn whatsapp-link">
+                      class="whatsapp-btn whatsapp-link"
+                      aria-label="დაგვიკავშირდით WhatsApp-ში უფასო კონსულტაციისთვის">
                       დამიკავშირდი WhatsApp-ზე
                       <i class="fab fa-whatsapp"></i>
                     </a>
@@ -283,24 +291,31 @@
           </div>
         </div>
       </section>
-    </div>
-    <div class="massage">
-      <a href="https://wa.me/995598343820" class="whatsapp-link">
-        <img
-          src="./assets/icons/massage.svg"
-          class="icon-svg"
-          alt="massage to whatsapp" />
-      </a>
-    </div>
-    <footer id="footer" class="wrapper style1-alt">
-      <div class="inner">
-        <ul class="menu">
-          <li>&copy; ყველა უფლება დაცულია.</li>
-          <li><a href="privacy.html">კონფიდენციალურობის პოლიტიკა</a></li>
-          <li>Built by <a href="შენი_ლინკი_აქ">Nino Sopoian</a></li>
-        </ul>
+      <div class="massage">
+        <a href="https://wa.me/995598343820" class="whatsapp-link">
+          <img
+            src="./assets/icons/massage.svg"
+            aria-label="დაგვიკავშირდით WhatsApp-ში უფასო კონსულტაციისთვის"
+            class="icon-svg"
+            alt="massage to whatsapp" />
+        </a>
       </div>
-    </footer>
+      <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+          <ul class="menu">
+            <li>Ekodaily - შენი ყოველდღიური ეკო მეგობარი.</li>
+            <li>&copy; ყველა უფლება დაცულია.</li>
+            <li><a href="privacy.html">კონფიდენციალურობის პოლიტიკა</a></li>
+            <li>
+              Built by
+              <a href="https://www.facebook.com/profile.php?id=61586822781868"
+                >Nino Sopoian</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
 
     <script src="./script.js"></script>
     <script src="analytics.js" defer></script>
