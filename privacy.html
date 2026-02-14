@@ -1,50 +1,91 @@
 <!doctype html>
 <html lang="ka">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>კონფიდენციალურობის პოლიტიკა</title>
+    <link rel="stylesheet" href="./styles.css"> 
     <style>
-      body {
-        font-family: sans-serif;
-        line-height: 1.6;
-        padding: 50px;
-        max-width: 800px;
-        margin: auto;
-        color: #333;
-      }
-      h1 {
-        color: #2e7d32;
-      }
+        /* სტილების იზოლაცია */
+        .privacy-body {
+            background-color: #f9f9f9; /* ოდნავ განსხვავებული ფონი */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .privacy-container {
+            background: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            padding: 40px;
+            max-width: 800px;
+            margin: 50px 20px;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 12px;
+        }
+
+        .privacy-container h1 {
+            color: #2e7d32;
+            border-bottom: 2px solid #e8f5e9;
+            padding-bottom: 15px;
+            font-size: 2rem;
+        }
+
+        .privacy-container h3 {
+            color: #1b5e20;
+            margin-top: 30px;
+            font-size: 1.3rem;
+        }
+
+        .privacy-container p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .privacy-container .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #2e7d32;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .privacy-container .back-link:hover {
+            background-color: #2e7d32;
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            .privacy-container {
+                padding: 25px;
+                margin: 20px 10px;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <h1>კონფიდენციალურობის პოლიტიკა</h1>
-    <p>
-      წინამდებარე დოკუმენტი აღწერს, თუ როგორ ხდება თქვენი მონაცემების დამუშავება
-      ჩვენს ვებგვერდზე.
-    </p>
+</head>
+<body class="privacy-body">
+    <div class="privacy-container">
+        <h1>კონფიდენციალურობის პოლიტიკა</h1>
+        
+        <p>წინამდებარე დოკუმენტი აღწერს, თუ როგორ ხდება თქვენი მონაცემების დამუშავება ჩვენს ვებგვერდზე.</p>
 
-    <h3>1. მონაცემების შეგროვება</h3>
-    <p>
-      ჩვენ ვიყენებთ Meta Pixel-ს (Facebook/Instagram), რომელიც აგროვებს ანონიმურ
-      ინფორმაციას თქვენი ვიზიტის შესახებ: IP მისამართი, ბრაუზერის ტიპი და
-      გვერდზე განხორციელებული მოქმედებები (ღილაკზე დაჭერა).
-    </p>
+        <h3>1. მონაცემების შეგროვება</h3>
+        <p>ჩვენ ვიყენებთ Meta Pixel-ს (Facebook/Instagram), რომელიც აგროვებს ანონიმურ ინფორმაციას თქვენი ვიზიტის შესახებ: IP მისამართი, ბრაუზერის ტიპი და გვერდზე განხორციელებული მოქმედებები (ღილაკზე დაჭერა).</p>
 
-    <h3>2. გამოყენების მიზანი</h3>
-    <p>
-      შეგროვებული ინფორმაცია გამოიყენება მხოლოდ სარეკლამო კამპანიების
-      ოპტიმიზაციისა და მომხმარებლის გამოცდილების გაუმჯობესების მიზნით.
-    </p>
+        <h3>2. გამოყენების მიზანი</h3>
+        <p>შეგროვებული ინფორმაცია გამოიყენება მხოლოდ სარეკლამო კამპანიების ოპტიმიზაციისა და მომხმარებლის გამოცდილების გაუმჯობესების მიზნით.</p>
 
-    <h3>3. მესამე მხარე</h3>
-    <p>
-      ჩვენ არ გადავცემთ თქვენს პერსონალურ მონაცემებს მესამე პირებს, გარდა
-      ანალიტიკური და სარეკლამო პლატფორმებისა (Facebook, Google), რომლებიც
-      უზრუნველყოფენ მონაცემთა დაცვას.
-    </p>
+        <h3>3. მესამე მხარე</h3>
+        <p>ჩვენ არ გადავცემთ თქვენს პერსონალურ მონაცემებს მესამე პირებს, გარდა ანალიტიკური და სარეკლამო პლატფორმებისა (Facebook, Google), რომლებიც უზრუნველყოფენ მონაცემთა დაცვას.</p>
 
-    <p><a href="index.html">დაბრუნება მთავარ გვერდზე</a></p>
-  </body>
+        <a href="index.html" class="back-link">← დაბრუნება მთავარ გვერდზე</a>
+    </div>
+</body>
 </html>
