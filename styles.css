@@ -82,8 +82,8 @@ button,
     right: 2%;
     bottom: 3%;
     background-color: var(--sidebar-green);
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     overflow: hidden;
     z-index: 999;
@@ -306,8 +306,8 @@ ul.actions li a:hover {
 
 .icon-svg {
     margin: 0 auto;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     filter: invert(78%) sepia(39%) saturate(615%) hue-rotate(44deg) brightness(92%) contrast(88%);
 }
 
