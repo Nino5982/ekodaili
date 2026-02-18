@@ -1,4 +1,3 @@
-/* 1. Variables */
 :root {
     --sidebar-green: #2D3E27;
     --cta-green: #7BB354;
@@ -9,7 +8,6 @@
     --sidebar-width: 18em;
 }
 
-/* 2. Enhanced Reset & Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -25,20 +23,17 @@ body {
     overflow-x: hidden;
 }
 
-/* ბაზისური სტილები ლინკებისთვის */
 a {
     text-decoration: none;
     color: inherit;
     transition: color 0.2s ease, border-bottom-color 0.2s ease;
 }
 
-/* ბაზისური სტილები სიებისთვის */
 ul,
 ol {
     list-style: none;
 }
 
-/* მედია ელემენტების რესეტი */
 img,
 video {
     display: block;
@@ -46,7 +41,6 @@ video {
     height: auto;
 }
 
-/* ფორმის ელემენტების სრული რესეტი */
 input,
 button,
 textarea,
@@ -74,7 +68,6 @@ button,
     transition: all 0.3s ease;
 }
 
-/* massage watsup */
 
 .massage {
     padding: 9px;
@@ -89,7 +82,6 @@ button,
     z-index: 999;
 }
 
-/* 3. Sidebar Layout */
 #sidebar {
     position: fixed;
     top: 0;
@@ -116,27 +108,6 @@ button,
     letter-spacing: 0.25em;
     text-transform: uppercase;
 }
-
-/* ხაზის ანიმაცია */
-/* #sidebar nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--accent-lime);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-#sidebar nav a.active::after,
-#sidebar nav a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-} */
-/* Sidebar Navigation Links */
 #sidebar nav a {
     position: relative;
     display: block;
@@ -149,7 +120,6 @@ button,
     transition: color 0.2s ease;
 }
 
-/* Base underline (Static) */
 #sidebar nav a::before {
     content: '';
     position: absolute;
@@ -161,7 +131,6 @@ button,
     background: rgba(255, 255, 255, 0.15);
 }
 
-/* Active/Hover Gradient underline (Animated) */
 #sidebar nav a::after {
     content: '';
     position: absolute;
@@ -189,12 +158,10 @@ button,
     color: var(--text-muted);
 }
 
-/* 4. Main Content Area */
 #wrapper {
     margin-left: var(--sidebar-width);
 }
 
-/* 5. Intro Section */
 #intro {
     position: relative;
     overflow: hidden;
@@ -204,7 +171,6 @@ button,
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* background: url("./assets/images/intro.webp") center/cover no-repeat fixed; */
 }
 
 .hero-bg-img {
@@ -249,7 +215,6 @@ img.hero-bg-img {
     font-weight: 700;
 }
 
-/* 6. Action Lists */
 ul.actions {
     display: flex;
     gap: 1em;
@@ -381,7 +346,6 @@ ul.actions li a:hover {
     line-height: 1.6;
 }
 
-/* categories*/
 .split-layout {
     display: flex;
     align-items: center;
@@ -438,17 +402,8 @@ ul.actions li a:hover {
 .gallery-item:hover span {
     transform: translateY(-5px);
 }
-
-
-
-
-
-/* –––––––––––––––––––––––––––––– */
-
-/* Custom Section General Styles (Adjusted for the new design) */
 .custom-section {
     background-color: #f8faf9 !important;
-    /* Lighter background */
     color: var(--sidebar-green) !important;
     padding: 6em 0;
 }
@@ -456,16 +411,12 @@ ul.actions li a:hover {
 .section-title {
     text-align: center;
     color: var(--sidebar-green);
-    /* Use brand green for titles */
     font-size: 2.5em;
-    /* Slightly larger title */
     margin-bottom: 3em;
-    /* More space below title */
     font-weight: 800;
     letter-spacing: -0.03em;
 }
 
-/* Category Cards Grid */
 .category-cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -520,17 +471,14 @@ ul.actions li a:hover {
 
 .card-content {
     padding: 1.8em 2em;
-    /* Padding inside the card */
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    /* Allows content to expand */
 }
 
 .card-content h3 {
     font-size: 1.4em;
     color: var(--sidebar-green);
-    /* Brand green for titles */
     margin-bottom: 0.6em;
     font-weight: 700;
 }
@@ -538,17 +486,14 @@ ul.actions li a:hover {
 .card-content p {
     font-size: 0.95em;
     color: #555;
-    /* Muted text color */
     line-height: 1.6;
     margin-bottom: 1.5em;
     flex-grow: 1;
-    /* Allows paragraph to take available space */
 }
 
 .card-link {
     display: inline-block;
     color: var(--cta-green);
-    /* Accent green for link */
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.8em;
@@ -575,12 +520,6 @@ ul.actions li a:hover {
     transform: scaleX(1);
     transform-origin: left;
 }
-
-
-
-
-
-/* --- Partner Card Styling --- */
 .about-partner {
     flex: 1 !important;
     text-align: left !important;
@@ -606,7 +545,6 @@ ul.actions li a:hover {
     margin-bottom: 0.5em;
 }
 
-/* --- Steps Styling --- */
 .order-flow {
     flex: 1.2 !important;
     text-align: left !important;
@@ -654,41 +592,14 @@ ul.actions li a:hover {
     padding-left: 5px;
 }
 
-/* --- Fixed CTA Button (Floating) --- */
-/* .fixed-cta-button {
-    position: fixed;
-    bottom: 2em;
-    right: 2em;
-    z-index: 9999;
-    background: var(--cta-green);
-    color: white;
-    padding: 1.2em 2.5em;
-    border-radius: 4em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-} */
-
-/* .fixed-cta-button:hover {
-    background: var(--accent-lime);
-    transform: translateY(-5px);
-    color: white;
-} */
-
-/* --- Final CTA Parallax Section --- */
 .wrapper-parallax {
     position: relative;
     padding: 10em 0;
-    /* სიმაღლე, რომ ფოტო კარგად გამოჩნდეს სქროლვისას */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     background: url("./assets/images/intro.webp") center/cover no-repeat fixed;
-    /* იგივე ფოტო და ფიქსირებული პოზიცია */
     overflow: hidden;
 }
 
@@ -711,26 +622,18 @@ ul.actions li a:hover {
 }
 
 .wrapper-parallax p {
-    /* color: var(--accent-lime); */
     color: #4A5D44;
     font-weight: bold;
     margin-bottom: 2.5em;
     font-size: 1.1em;
 }
-
-
-
-/* ––––––––––––––––––––––––––––– */
-/* სექციის კონტეინერი */
 .about-me-section {
     padding: 100px 0;
     display: flex;
     justify-content: center;
     background-color: #f9fbf8bd;
-    /* ღია ნაცრისფერი/მწვანე ფონი */
 }
 
-/* მთავარი ბარათი */
 .about-card {
     position: relative;
     width: 90%;
@@ -778,7 +681,6 @@ ul.actions li a:hover {
 .partner-name {
     font-size: 2.5rem;
     margin: 10px 0;
-    /* color: var(--sidebar-green); */
     color: #2D3E27;
 }
 
@@ -788,7 +690,6 @@ ul.actions li a:hover {
     margin-bottom: 25px;
 }
 
-/* ბულეთები */
 .about-benefits {
     list-style: none;
     padding: 0;
@@ -811,7 +712,6 @@ ul.actions li a:hover {
     font-weight: bold;
 }
 
-/* WhatsApp ღილაკი */
 .whatsapp-btn {
     display: inline-flex;
     align-items: center;
@@ -847,12 +747,6 @@ ul.actions li a:hover {
     padding-left: 0;
 }
 
-/* რესპონსივი მობილურისთვის */
-
-
-/* --- Responsive --- */
-
-/* Tablet (1280px) */
 @media screen and (max-width: 1280px) {
     #sidebar {
         width: 100%;
@@ -941,7 +835,6 @@ ul.actions li a:hover {
     }
 }
 
-/* Mobile (736px) */
 @media screen and (max-width: 736px) {
     #sidebar {
         display: none;
@@ -997,7 +890,6 @@ ul.actions li a:hover {
 
     .category-cards-grid {
         grid-template-columns: 1fr;
-        /* Single column on smaller screens */
         padding: 0 1.5em;
     }
 
